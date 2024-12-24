@@ -31,7 +31,7 @@ export function validatePath(path: string): string {
 
   const parts = path.split('/');
   for (const part of parts) {
-    if (part === '.') {
+    if (part === '.' || part === '..') {
       continue;
     }
 
